@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements ratePicker.SaveRa
     }
 
     private void intiRateButton(){
-        Button rateButton = findViewById(R.id.rateButton);
+        Button rateButton = findViewById(R.id.rateMeal);
         rateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

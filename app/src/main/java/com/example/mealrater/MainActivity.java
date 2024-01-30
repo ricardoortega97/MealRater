@@ -7,8 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RatingBar;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements ratePicker.SaveRateListener {
+public class MainActivity extends AppCompatActivity implements ratePicker.OnRatingBarListerner {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +30,8 @@ public class MainActivity extends AppCompatActivity implements ratePicker.SaveRa
         });
     }
     @Override
-    public void didFinishedratePicker(RatingBar ratings) {
-
+    public void didFinishedRateDialog(RatingBar selectedRate) {
+        TextView rate = findViewById(R.id.ratingView);
+        rate.setText(" " + selectedRate.getRating());
     }
 }
